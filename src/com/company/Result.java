@@ -49,7 +49,6 @@ public class Result {
                 outputArabic =0;
                 break;
         }
-        System.out.println(outputArabic + " kjklgjk;j");
         return outputArabic;
     }
 
