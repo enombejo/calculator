@@ -2,7 +2,16 @@ package com.company;
 
 import java.util.List;
 
+/**
+ * Класс для конвертации римских чисел в арабские и наоборот
+ */
 public class ConvertRomanNumbers {
+
+    /**
+     * Преобразует римские числа в арабские
+     * @param input на входе строка
+     * @return возвращает целое число
+     */
     public static int romanToArabic(String input) {
         String romanNumeral = input.toUpperCase();
         int result = 0;
@@ -28,6 +37,11 @@ public class ConvertRomanNumbers {
         return result;
     }
 
+    /**
+     * Преобразует арабское число в римское
+     * @param number на входе целое число типа int
+     * @return возвращает строку
+     */
     public static String arabicToRoman(int number) {
         if ((number <= 0) || (number > 4000)) {
             throw new IllegalArgumentException(number + " is not in range (0,4000]");

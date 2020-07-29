@@ -1,5 +1,8 @@
 package com.company;
 
+/**
+ * Класс для получения результата арифметической операции
+ */
 public class Result {
     private int a;
     private  int b;
@@ -13,7 +16,7 @@ public class Result {
         this.b = b;
         this.operation = operation;
         if (!numberType.equals("arab") && !numberType.equals("rome")) {
-            System.err.println("Не правильный тип цифр");
+            System.err.println("Не соответствие типов чисел!");
             System.exit(0);
         }
         this.numberType = numberType;
@@ -31,6 +34,10 @@ public class Result {
         return operation;
     }
 
+    /**
+     * В методе выполняется операции с арабским числами
+     * @return возвращает целое число
+     */
     public int getOutputArabic() {
         switch (operation) {
             case "+":
@@ -52,11 +59,19 @@ public class Result {
         return outputArabic;
     }
 
+    /**
+     * Метод конвертирует арабские числа в римские
+     * @return возвращает строку с римскими числами
+     */
     public String getOutputRoman() {
         outputRoman = ConvertRomanNumbers.arabicToRoman(getOutputArabic());
         return outputRoman;
     }
 
+    /**
+     * Метод выдает тот тип чисел, который был при вводе выражения
+     * @return возвращает строку с арабскими или римскими числами
+     */
     public String getOutput() {
         if (numberType.equals("arab")) {
             return String.valueOf(getOutputArabic());
