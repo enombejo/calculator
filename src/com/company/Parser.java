@@ -5,6 +5,9 @@ import java.util.Map;
 import java.util.StringTokenizer;
 import java.util.regex.Pattern;
 
+/**
+ * Класс для парсинга выражений
+ */
 public class Parser {
     private String str;
     private String regexArab;
@@ -31,6 +34,10 @@ public class Parser {
         operations = new char[]{'+', '-', '*', '/'};
     }
 
+    /**
+     * Метод отдает результат парсинга
+     * @return Result - результат парсинга строки выражения
+     */
     public Result getResult() {
         int a=0, b=0;
         String operation = "";
